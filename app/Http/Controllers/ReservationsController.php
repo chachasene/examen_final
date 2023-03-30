@@ -68,7 +68,7 @@ class ReservationsController extends Controller
 		$reservation->a_longitude = $request->input('a_longitude');
 		$reservation->a_latitude = $request->input('a_latitude');
 		$reservation->prix = $request->input('prix');
-	
+
         $reservation->save();
 
         $paiement = new Paiement();
@@ -84,7 +84,7 @@ class ReservationsController extends Controller
         }
         $paiement->save();
 
-        return redirect()->route('reservations.index');
+        return redirect()->route('client.reservations');
     }
 
     /**
